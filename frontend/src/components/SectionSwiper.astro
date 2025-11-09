@@ -1,0 +1,31 @@
+---
+import { getGlobalSettings, getProjects, getStrapiMediaUrl } from '../lib/strapi';
+
+const settings = await getGlobalSettings();
+const projects = await getProjects();
+
+const tituloSecao = settings?.titulo_secao_projetos || "Projetos Recentes";
+
+const fallbackProjects = [
+    { id: 1, titulo: "Projeto 1", imagemUrl: "https://picsum.photos/seed/10/400/250" },
+    { id: 2, titulo: "Projeto 2", imagemUrl: "https://picsum.photos/seed/11/400/250" },
+    { id: 3, titulo: "Projeto 3", imagemUrl: "https://picsum.photos/seed/12/400/250" },
+    { id: 4, titulo: "Projeto 4", imagemUrl: "https://picsum.photos/seed/13/400/250" },
+];
+
+const displayProjects = projects.length > 0 ? projects.map(p => ({
+    ...p,
+    imagemUrl: getStrapiMediaUrl(p.imagem)
+})) : fallbackProjects;
+---
+
+<section id="galeria" class="text-center bg-gray-100 py-16">
+  <h2 class="text-3xl font-semibold mb-10">{tituloSecao}</h2>
+  <div class="flex overflow-x-auto gap-4 px-4 pb-4 snap-x">
+    {displayProjects.map(projeto => (
+      <div class="flex-shrink-0 w-4/5 md:w-1/3 snap-center">
+        <img src={projeto.imagemUrl} class="rounded-lg shadow-md w-full h-64 object-cover" alt={projeto.titulo} />
+      </div>
+    ))}
+  </div>
+</section>

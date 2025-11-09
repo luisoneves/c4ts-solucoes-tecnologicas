@@ -1,0 +1,33 @@
+{
+  // Extensões recomendadas para este projeto
+  "recommendations": [
+    // 🪐 Astro
+    "astro-build.astro-vscode",
+
+    // 🧹 Código limpo e formatação
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+
+    // 📝 Ortografia e escrita
+    "streetsidesoftware.code-spell-checker",
+
+    // 🐙 Git e controle de versão
+    "eamodio.gitlens",
+
+    // 🐳 Docker
+    "ms-azuretools.vscode-docker",
+
+    // 🌐 HTML e Tags
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+
+    // 🎨 Ícones e temas
+    "usernamehw.errorlens",
+
+    // 🌈 Tailwind CSS
+    "bradlc.vscode-tailwindcss"
+  ],
+
+  // Extensões que o VS Code não deve sugerir
+  "unwantedRecommendations": []
+}

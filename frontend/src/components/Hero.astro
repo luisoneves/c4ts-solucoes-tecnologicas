@@ -1,0 +1,21 @@
+---
+// Importamos a mesma função que o Navbar usa! Zero duplicação.
+import { getGlobalSettings } from '../lib/strapi';
+
+const settings = await getGlobalSettings();
+const heroData = settings?.hero;
+
+// Fallbacks de segurança, caso o hero não esteja preenchido
+const titulo = heroData?.titulo || "Título Padrão do Hero";
+const subtitulo = heroData?.subtitulo || "Subtítulo padrão do hero.";
+const botaoLabel = heroData?.botao?.label || "Clique Aqui";
+const botaoUrl = heroData?.botao?.url || "#";
+---
+
+<section id="hero" class="text-center py-24 bg-gradient-to-b from-blue-100 to-white">
+  <h1 class="text-4xl font-bold mb-4">{titulo}</h1>
+  <p class="text-lg text-gray-600 mb-8">{subtitulo}</p>
+  <a href={botaoUrl} class="bg-blue-200 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-400 transition">
+    {botaoLabel}
+  </a>
+</section>

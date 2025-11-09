@@ -1,0 +1,18 @@
+---
+import { getGlobalSettings } from "../lib/strapi";
+
+const settings = await getGlobalSettings();
+const footerData = settings?.footer;
+
+const copyright = footerData?.textoCopyright || `© ${new Date().getFullYear()} Marca Padrão.`;
+const creditoLabel = footerData?.credito?.label || "Seu Nome";
+const creditoUrl = footerData?.credito?.url || "#";
+---
+
+<footer class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
+  <p>{copyright}</p>
+  <p class="text-sm mt-2">
+    Feito com 💙 por <a href={creditoUrl} target="_blank" class="text-blue-400 hover:underline"
+      >{creditoLabel}</a>
+  </p>
+</footer>
