@@ -5,3 +5,5 @@ buildCommand = "cd backend && npm install"
 [deploy]
 startCommand = "cd backend && npm run start"
 
+[env]
+NODE_VERSION = "20"
