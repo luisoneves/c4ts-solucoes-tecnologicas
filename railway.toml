@@ -4,3 +4,4 @@ buildCommand = "cd backend && npm install"
 
 [deploy]
 startCommand = "cd backend && npm run start"
+
