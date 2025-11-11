@@ -1,0 +1,167 @@
+{
+    // ===============================
+    // ⚙️  TERMINAL E AMBIENTE
+    // ===============================
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Ubuntu-24.04-G (WSL)": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu-24.04-G"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Ubuntu-24.04-G (WSL)",
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.scrollback": 10000,
+
+    // ===============================
+    // 🧠  EDITOR E FORMATAÇÃO
+    // ===============================
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 1.6,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "editor.renderWhitespace": "selection",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.minimap.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.rulers": [140],
+    "editor.renderLineHighlight": "gutter",
+    "editor.smoothScrolling": true,
+    "editor.renderControlCharacters": false,
+
+    // ===============================
+    // 🧩  QUALIDADE E PADRONIZAÇÃO
+    // ===============================
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": ["javascript", "typescript", "astro", "vue", "svelte"],
+    "prettier.requireConfig": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "onWindowChange",
+
+    // ===============================
+    // 🧭  EXPLORER E NAVEGAÇÃO
+    // ===============================
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    "explorer.incrementalNaming": "smart",
+    "workbench.tree.indent": 20,
+    "breadcrumbs.enabled": true,
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    "files.simpleDialog.enable": true,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/.git": true
+    },
+    "explorer.excludeGitIgnore": true,
+
+    // ===============================
+    // 🧰  GIT, NPM E INTEGRAÇÕES
+    // ===============================
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "always",
+    "npm.enableRunFromFolder": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.suggest.autoImports": true,
+    "javascript.suggest.autoImports": true,
+
+    // ===============================
+    // 🧠  CODE SPELL CHECKER (MULTI-IDIOMA)
+    // ===============================
+    "cSpell.language": "en,pt,fr,es,it",
+    "cSpell.correctInPlace": false,
+    "cSpell.suggestionsTimeout": 500,
+    "cSpell.userWords": [
+        "Strapi",
+        "Astro",
+        "frontend",
+        "backend",
+        "multi-tenant"
+    ],
+
+    // ===============================
+    // 🤖  COPILOT E CONTINUE DEV
+    // ===============================
+    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    // "github.copilot.nextEditSuggestions.enabled": true, // desativado por instabilidade
+    "continue.dev.telemetry": false,
+    "continue.dev.openai.apiBase": "http://localhost:11434", // se usar Ollama
+    "continue.dev.embeddings.storage": "postgres", // ou "obsidian" para local
+
+    // ===============================
+    // 🎨  VISUAL E INTERFACE
+    // ===============================
+    "workbench.colorTheme": "Themarro David Remix",
+    "workbench.iconTheme": "dark-minimalist-icons",
+    "window.zoomLevel": 0,
+    "window.titleBarStyle": "custom",
+    "window.commandCenter": true,
+    "workbench.sideBar.location": "left",
+    "workbench.externalBrowser": "firefox",
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#dfe4b8"
+    },
+
+    // ===============================
+    // 🐳  CONTAINERS E WSL
+    // ===============================
+    "containers.commands.attach": "${containerCommand} exec -it ${containerId} ${shellCommand}",
+    "remote.WSL.fileWatcher.polling": true,
+    "remote.containers.defaultExtensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "astro-build.astro-vscode",
+        "bradlc.vscode-tailwindcss",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag"
+    ],
+    "docker.containers.attachShellCommand": "/bin/bash",
+    "editor.guides.indentation": true,
+    "database-client.autoSync": true,
+
+    // ===============================
+    // 🔒  SYNC E PERSONALIZAÇÃO
+    // ===============================
+    "settingsSync.ignoredSettings": [
+        "workbench.colorTheme",
+        "workbench.iconTheme"
+    ]
+}
