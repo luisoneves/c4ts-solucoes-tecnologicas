@@ -1,6 +1,2 @@
 [build]
 builder = "DOCKERFILE"
-
-[env]
-NODE_VERSION = "20"
-
