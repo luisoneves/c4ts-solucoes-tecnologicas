@@ -2,11 +2,5 @@
   "name": "c4ts-frontend",
   "website": true,
   "static": true,
-  "staticFiles": "frontend/dist",
-  "build": {
-    "commands": [
-      "cd frontend && pnpm install --frozen-lockfile",
-      "cd frontend && pnpm run build"
-    ]
-  }
+  "staticFiles": "public"
 }
