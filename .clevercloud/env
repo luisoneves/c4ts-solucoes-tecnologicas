@@ -1,0 +1,2 @@
+CC_BUILD_TOOL=pnpm@latest
+NODE_VERSION=20
